@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text_signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="415dp"
+        android:layout_height="212dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.769"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sign_up" />
+
+    <ScrollView
+        android:layout_width="417dp"
+        android:layout_height="545dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linear_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/header_signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20px"
+                android:layout_marginStart="50px"
+                android:layout_marginLeft="50px"
+                android:gravity="center"
+                android:text="Join Us Today"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#009688" />
+
+            <TextView
+                android:id="@+id/txt_fname"
+                android:layout_width="600px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20px"
+                android:text="Full Name"
+                android:textColor="#00574F" />
+
+            <EditText
+                android:id="@+id/in_fname"
+                android:layout_width="600px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:hint="e.g. Tony Stark"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/text_email"
+                android:layout_width="600px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20px"
+                android:text="Email"
+                android:textColor="#00574F" />
+
+            <EditText
+                android:id="@+id/in_email"
+                android:layout_width="600px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:hint="ironman@avengers.com"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/text_password"
+                android:layout_width="600px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Password"
+                android:textColor="#00574F" />
+
+            <EditText
+                android:id="@+id/input_password"
+                android:layout_width="600px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:hint="Create a password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/text_cpassword"
+                android:layout_width="600px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20px"
+                android:text="Confirm Password"
+                android:textColor="#00574F" />
+
+            <EditText
+                android:id="@+id/input_cpassword"
+                android:layout_width="600px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:hint="Confirm Password"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/button_signup"
+                android:layout_width="213dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="80px"
+                android:background="#009688"
+                android:text="Sign Up"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="213dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30px"
+                android:background="#009688"
+                android:text="Cancel"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

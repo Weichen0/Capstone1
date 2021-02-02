@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_graph"
+    android:scaleType="centerInside"
+    tools:context=".UI_GraphMenu">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nav_bar"
+        android:layout_marginTop="300px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300px"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_bar_f"
+                    android:layout_width="280px"
+                    android:layout_height="300px"
+                    android:layout_margin="0px"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/bar_factors" />
+
+                <ImageButton
+                    android:id="@+id/btn_bar_dvu"
+                    android:layout_width="280px"
+                    android:layout_height="300px"
+                    android:layout_margin="0px"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/bar_du" />
+
+                <ImageButton
+                    android:id="@+id/btn_bar_eva"
+                    android:layout_width="280px"
+                    android:layout_height="300px"
+                    android:layout_margin="0px"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/bar_ea" />
+
+                <ImageButton
+                    android:id="@+id/btn_bar_l"
+                    android:layout_width="280px"
+                    android:layout_height="300px"
+                    android:layout_margin="0px"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/bar_location" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_piechart"
+                android:layout_width="match_parent"
+                android:layout_height="300px"
+                android:layout_marginTop="150px"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="300px"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btn_pie_d"
+                        android:layout_width="270px"
+                        android:layout_height="300px"
+                        android:layout_weight="1"
+                        android:background="#FFFFFF"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/pie_d" />
+
+                    <ImageButton
+                        android:id="@+id/btn_pie_i"
+                        android:layout_width="270px"
+                        android:layout_height="300px"
+                        android:layout_weight="1"
+                        android:background="#FFFFFF"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/pie_i" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_others"
+                android:layout_width="match_parent"
+                android:layout_height="300px"
+                android:layout_marginTop="150px"
+                android:layout_marginBottom="150px"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btn_line_idr"
+                        android:layout_width="270px"
+                        android:layout_height="300px"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="#FFFFFF"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/line_idr" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        app:menu="@menu/menu_navigation" >
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>

@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Form_Register">
+
+    <LinearLayout
+        android:id="@+id/register_vview"
+        android:layout_width="410dp"
+        android:layout_height="730dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/sview"
+            android:layout_width="416dp"
+            android:layout_height="681dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp">
+
+            <LinearLayout
+                android:id="@+id/sview_vview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="246dp"
+                    app:srcCompat="@drawable/registernew" />
+
+                <TextView
+                    android:id="@+id/txt_register_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" "
+                    android:textColor="#303030" />
+
+                <TextView
+                    android:id="@+id/txt_register1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Section 1: Patient Information"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txt_pname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Patient name" />
+
+                <EditText
+                    android:id="@+id/in_pname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/txt_pnric"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NRIC" />
+
+                <EditText
+                    android:id="@+id/in_pnric"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/txt_cpn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Covid Patient Number" />
+
+                <EditText
+                    android:id="@+id/in_cpn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/txt_pcontact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact" />
+
+                <EditText
+                    android:id="@+id/in_pcontact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/txt_pbday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Birthday" />
+
+                <EditText
+                    android:id="@+id/in_pbday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="(YYYYMMDD) e.g. 20000524"
+                    android:inputType="date" />
+
+                <TextView
+                    android:id="@+id/txt_pgender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gender" />
+
+                <RadioGroup
+                    android:id="@+id/rgroup_pgender"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/rbtn1_pgender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:textColor="#303030" />
+
+                    <RadioButton
+                        android:id="@+id/rbtn2_pgender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:textColor="#303030" />
+
+                    <RadioButton
+                        android:id="@+id/rbtn3_pgender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rather Not Say"
+                        android:textColor="#303030" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txt_prace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Race" />
+
+                <EditText
+                    android:id="@+id/in_prace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="e.g. Malay"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/txt_pnationality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nationality" />
+
+                <EditText
+                    android:id="@+id/in_pnationality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="e.g. Malaysian"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/txt_pcondition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Patient Condition" />
+
+                <EditText
+                    android:id="@+id/in_pcondition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="(Infected, Diseased, Recovered)"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/txt_padd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address" />
+
+                <EditText
+                    android:id="@+id/in_padd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="e.g. Subang Jaya, Selangor"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/txt_register2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Section 2: Doctor In Charge"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txt_dname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Doctor's Name" />
+
+                <EditText
+                    android:id="@+id/in_dname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/txt_doctorid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Doctor's ID" />
+
+                <EditText
+                    android:id="@+id/in_doctorid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/txt_hospital"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hospital" />
+
+                <EditText
+                    android:id="@+id/in_hospital"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/txt_register3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Section 3: Infection Factors"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txt_primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Possible Primary Factor" />
+
+                <CheckBox
+                    android:id="@+id/cb1_primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Indirect (droplets on object)"
+                    android:textColor="#303030" />
+
+                <CheckBox
+                    android:id="@+id/cb2_primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact (physical contact)"
+                    android:textColor="#303030" />
+
+                <CheckBox
+                    android:id="@+id/cb3_primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Aerosol (airborne particle)"
+                    android:textColor="#303030" />
+
+                <CheckBox
+                    android:id="@+id/cb4_primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Unknown"
+                    android:textColor="#303030" />
+
+                <TextView
+                    android:id="@+id/txt_secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Possible Secondary Factor" />
+
+                <CheckBox
+                    android:id="@+id/cb1_secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Clustering (expose to a group)"
+                    android:textColor="#303030" />
+
+                <CheckBox
+                    android:id="@+id/cb2_secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Environmental (weather, temperature, location)"
+                    android:textColor="#303030" />
+
+                <CheckBox
+                    android:id="@+id/cb3_secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Touching Face (Mouth, Eyes, Nose)"
+                    android:textColor="#303030" />
+
+                <CheckBox
+                    android:id="@+id/cb4_secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hygiene (not wearing mask, no wash hands)"
+                    android:textColor="#303030" />
+
+                <CheckBox
+                    android:id="@+id/cb5_secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Unknown"
+                    android:textColor="#303030" />
+
+                <TextView
+                    android:id="@+id/txt_exposure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Exposure" />
+
+                <CheckBox
+                    android:id="@+id/cb1_exposure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Local Travel (across states, cities)"
+                    android:textColor="#303030" />
+
+                <CheckBox
+                    android:id="@+id/cb2_exposure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="International Travel (overseas)"
+                    android:textColor="#303030" />
+
+                <CheckBox
+                    android:id="@+id/cb3_exposure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Visiting Friends (meeting, gathering)"
+                    android:textColor="#303030" />
+
+                <CheckBox
+                    android:id="@+id/cb4_exposure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Religion Activity"
+                    android:textColor="#303030" />
+
+                <CheckBox
+                    android:id="@+id/cb5_exposure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Indoor Sports (gym, courts)"
+                    android:textColor="#303030" />
+
+                <CheckBox
+                    android:id="@+id/cb6_exposure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Restaurant/ Hospitality"
+                    android:textColor="#303030" />
+
+                <CheckBox
+                    android:id="@+id/cb7_exposure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Work/ School"
+                    android:textColor="#303030" />
+
+                <CheckBox
+                    android:id="@+id/cb8_exposure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Unknown"
+                    android:textColor="#303030" />
+
+                <TextView
+                    android:id="@+id/txt_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Other Factors " />
+
+                <EditText
+                    android:id="@+id/in_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/txt_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Possible Location" />
+
+                <EditText
+                    android:id="@+id/in_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="(city) e.g. Subang Jaya"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/txt_daytest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Day Tested" />
+
+                <EditText
+                    android:id="@+id/in_daytest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="YYYYMMDD  e.g.20200921"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/txt_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Comments" />
+
+                <EditText
+                    android:id="@+id/in_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="116dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:background="#009688"
+            android:text="Submit"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

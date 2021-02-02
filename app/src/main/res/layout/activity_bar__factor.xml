@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_grey"
+    android:scaleType="fitXY"
+    tools:context=".Bar_Factor">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/header_factor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20px"
+                android:text="Factors"
+                android:textColor="#006158"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txt_barf_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20px"
+                android:textColor="#425956" />
+
+
+            <Spinner
+                android:id="@+id/spinner_factor"
+                android:layout_width="260dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:background="@android:drawable/btn_dropdown"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+            <Button
+                android:id="@+id/button_g"
+                android:layout_width="248dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="#009688"
+                android:text="Generate"
+                android:textColor="#FFFFFF" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barchart_f"
+                android:layout_width="366dp"
+                android:layout_height="456dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="4dp"
+                tools:ignore="MissingConstraints">
+
+            </com.github.mikephil.charting.charts.BarChart>
+
+            <TextView
+                android:id="@+id/txt_barf_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Summary"
+                android:textColor="#009688"
+                android:textSize="18sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="100px">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="272dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TableRow
+                            android:layout_width="399dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/txt_barf_f"
+                                android:layout_width="102dp"
+                                android:layout_height="wrap_content"
+                                android:background="#009688"
+                                android:text="Factor"
+                                android:textColor="#FFFFFF" />
+
+                            <TextView
+                                android:id="@+id/txt_barf_m"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:background="#009688"
+                                android:text="Most Contributed"
+                                android:textColor="#FFFFFF" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="269dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/txt_barf_a"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="All"
+                                android:textColor="#009688" />
+
+                            <TextView
+                                android:id="@+id/txt_f_f"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" "
+                                android:textColor="#FFFFFF" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="273dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/txt_barf_p"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Primary"
+                                android:textColor="#009688" />
+
+                            <TextView
+                                android:id="@+id/txt_f_f1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FFFFFF" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/txt_barf_s"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Secondary"
+                                android:textColor="#009688" />
+
+                            <TextView
+                                android:id="@+id/txt_f_f2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" "
+                                android:textColor="#FFFFFF" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="276dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/txt_bard_e"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Exposure"
+                                android:textColor="#009688" />
+
+                            <TextView
+                                android:id="@+id/txt_f_f3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" "
+                                android:textColor="#FFFFFF" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

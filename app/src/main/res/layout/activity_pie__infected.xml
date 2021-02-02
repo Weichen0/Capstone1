@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pie_Infected"
+    android:background="@drawable/bg_grey"
+    android:scaleType="fitXY">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/header_pief"
+                android:layout_width="375dp"
+                android:layout_height="32dp"
+                android:layout_margin="20px"
+                android:text="Pie Chart: Factors of Infected"
+                android:textColor="#006158"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txt_piei_description"
+                android:layout_width="377dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20px"
+                android:textColor="#425956" />
+
+            <Spinner
+                android:id="@+id/spinner_pie_f"
+                android:layout_width="260dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:background="@android:drawable/btn_dropdown"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+            <Button
+                android:id="@+id/btn_generate_pief"
+                android:layout_width="248dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="#009688"
+                android:text="Generate"
+                android:textColor="#FFFFFF"  />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/piechart_f"
+                android:layout_width="match_parent"
+                android:layout_height="392dp"></com.github.mikephil.charting.charts.PieChart>
+
+            <TextView
+                android:id="@+id/txt_piei_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Summary: Most Contributed"
+                android:textColor="#009688"
+                android:textSize="18sp" />
+
+            <TableLayout
+                android:layout_width="277dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txt_piei_f"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
+                        android:background="#009688"
+                        android:text="Factor"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/txt_piei_v"
+                        android:layout_width="159dp"
+                        android:layout_height="wrap_content"
+                        android:background="#009688"
+                        android:text="Value"
+                        android:textColor="#FFFFFF" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txt_piei_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" "
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/txt_piei_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" "
+                        android:textColor="#FFFFFF" />
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

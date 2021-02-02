@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI_ActionMenu">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nav_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="246dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/sign_in" />
+
+            <Button
+                android:id="@+id/btn_aboutcovid"
+                android:layout_width="600px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="30px"
+                android:background="#009688"
+                android:text="About COVID-19"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn_aboutus"
+                android:layout_width="600px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="30px"
+                android:background="#009688"
+                android:text="About Us"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="600px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="30px"
+                android:background="#009688"
+                android:text="Log Out"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        app:menu="@menu/menu_navigation" />
+
+</RelativeLayout>

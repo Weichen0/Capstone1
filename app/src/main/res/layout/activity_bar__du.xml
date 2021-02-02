@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bar_DoctorUser"
+    android:background="@drawable/bg_grey"
+    android:scaleType="fitXY">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/header_bar_du"
+                android:layout_width="375dp"
+                android:layout_height="32dp"
+                android:layout_margin="20px"
+                android:text="Doctor vs User: Factors"
+                android:textColor="#006158"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txt_idr_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20px"
+                android:textColor="#425956" />
+
+            <Spinner
+                android:id="@+id/spinner_location_du"
+                android:layout_width="260dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:background="@android:drawable/btn_dropdown"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+            <Button
+                android:id="@+id/button_generatedu"
+                android:layout_width="248dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="#009688"
+                android:text="Generate"
+                android:textColor="#FFFFFF" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barchart_du"
+                android:layout_width="372dp"
+                android:layout_height="427dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="4dp">
+
+            </com.github.mikephil.charting.charts.BarChart>
+
+            <TextView
+                android:id="@+id/txt_bardu_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Summary"
+                android:textColor="#009688"
+                android:textSize="18sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100px">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="367dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/txt_tabledu_f"
+                                android:layout_width="83dp"
+                                android:layout_height="wrap_content"
+                                android:background="#009688"
+                                android:text="Factor"
+                                android:textColor="#FFFFFF" />
+
+                            <TextView
+                                android:id="@+id/txt_tabledu_d"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="#009688"
+                                android:text="Doctor Response"
+                                android:textColor="#FFFFFF" />
+
+                            <TextView
+                                android:id="@+id/txt_tabledu_u"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="#009688"
+                                android:text="User Response"
+                                android:textColor="#FFFFFF" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/txt_tabledu_primary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Primary"
+                                android:textColor="#009688"
+                                android:textColorHighlight="#FFFFFF" />
+
+                            <TextView
+                                android:id="@+id/txt_du_mostd1"
+                                android:layout_width="133dp"
+                                android:layout_height="wrap_content"
+                                android:text=" "
+                                android:textColor="#FFFFFF" />
+
+                            <TextView
+                                android:id="@+id/txt_du_mostu1"
+                                android:layout_width="146dp"
+                                android:layout_height="match_parent"
+                                android:text=" "
+                                android:textColor="#FFFFFF" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/txt_tabledu_secondary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Secondary"
+                                android:textColor="#009688"
+                                android:textColorHighlight="#FFFFFF" />
+
+                            <TextView
+                                android:id="@+id/txt_du_mostd2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=" "
+                                android:textColor="#FFFFFF" />
+
+                            <TextView
+                                android:id="@+id/txt_du_mostu2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=" "
+                                android:textColor="#FFFFFF" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/txt_tabledu_exposure"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Exposure"
+                                android:textColor="#009688"
+                                android:textColorHighlight="#FFFFFF" />
+
+                            <TextView
+                                android:id="@+id/txt_du_mostd3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=" "
+                                android:textColor="#FFFFFF" />
+
+                            <TextView
+                                android:id="@+id/txt_du_mostu3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=" "
+                                android:textColor="#FFFFFF" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/txt_tabledu_all"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="All"
+                                android:textColor="#009688"
+                                android:textColorHighlight="#FFFFFF" />
+
+                            <TextView
+                                android:id="@+id/txt_du_mostd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=" "
+                                android:textColor="#FFFFFF" />
+
+                            <TextView
+                                android:id="@+id/txt_du_mostu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=" "
+                                android:textColor="#FFFFFF" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
